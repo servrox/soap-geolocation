@@ -1,0 +1,39 @@
+{
+  "name": "soap-geolocation",
+  "version": "1.0.0",
+  "description": "Geocoding application with a SOAP interfaces and an angular app for testing.",
+  "author": "Marcel Mayer",
+  "license": "ISC",
+  "scripts": {
+    "inst": "npm i && npm run inst-app && npm run inst-server",
+    "inst-app": "cd geo-app && npm i",
+    "inst-server": "cd geo-server && npm i",
+    "dev": "concurrently -c \"yellow.bold,green.bold\" -n \"App,Server\" \"npm run dev-app\" \"npm run dev-server\"",
+    "dev-app": "cd geo-app && npm run start",
+    "dev-server": "cd geo-server && npm run start",
+    "clean": "rimraf package-lock.json && rimraf node_modules && npm run clean-app && npm run clean-server",
+    "clean-app": "cd geo-app && rimraf package-lock.json && rimraf node_modules",
+    "clean-server": "cd geo-server && rimraf package-lock.json && rimraf node_modules",
+    "clean-inst": "npm run clean && npm run inst"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/servrox/soap-geolocation.git"
+  },
+  "keywords": [
+    "SOAP",
+    "node.js",
+    "express",
+    "angular",
+    "SOAP-server",
+    "SOAP-client",
+    "server",
+    "client",
+    "web",
+    "service"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "rimraf": "^2.6.3"
+  }
+}

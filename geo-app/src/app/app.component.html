@@ -1,0 +1,38 @@
+<label for="city">Get coordinates by city name</label>
+<br />
+<input name="city" type="text" placeholder="Insert name" #city required />
+<button (click)="getCoords(city.value)">Get Coords</button>
+<br /><br />
+{{ coords }}
+<br /><br />
+<textarea
+  *ngIf="xmlResponseCoords"
+  cols="70"
+  rows="6"
+  placeholder="xml response"
+  >{{ xmlResponseCoords }}</textarea
+>
+
+<br />
+<br />
+<br />
+
+<label for="count">Load history of last processed cities</label>
+<br />
+<input name="count" type="number" placeholder="Insert amount" #count required />
+<button (click)="getHistory(count.value)">Load History</button>
+<br /><br />
+<ng-container *ngFor="let result of geoCodeResults; index as i">
+  {{ i + 1 }} -> {{ result }}
+  <br />
+</ng-container>
+<br />
+<textarea
+  *ngIf="xmlResponseHistory"
+  cols="70"
+  rows="6"
+  placeholder="xml response"
+  >{{ xmlResponseHistory }}</textarea
+>
+
+<!-- <router-outlet></router-outlet> -->

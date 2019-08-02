@@ -1,0 +1,17 @@
+{
+  "name": "geo-server",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "opencage-api-client": "^0.5.0",
+    "soap": "^0.29.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
