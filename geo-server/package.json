@@ -12,6 +12,6 @@
     "soap": "^0.29.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^3.0.0"
   }
 }
